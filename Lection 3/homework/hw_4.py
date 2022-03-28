@@ -25,18 +25,19 @@
 #
 # P.S. Во всех заранее созданных методах класса обращаться к storage можно через self.storage
 import random
+import typing as t
 
 INITIAL_SIZE = 10 ** 3
-MULTIPLIER = 10
+MULTIPLIER = 4
 
 
 class HashTable:
     def __init__(self):
-        # Create buckets for our Table with None in each cell
+        # Create buckets for our Table with None in each bucket
         self.storage = [None] * INITIAL_SIZE
 
-    def add(self, value):
-        # Add value to storage, return True on success, return False on failure
+    def add(self, value) -> t.Optional[int]:
+        # Add value to storage, return index/hash on success, None on failure
         pass
 
     def find(self, value) -> int:
